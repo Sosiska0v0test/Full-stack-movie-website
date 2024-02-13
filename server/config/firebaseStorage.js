@@ -20,6 +20,7 @@ initializeApp({
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
 })
 
+
 const storage = getStorage().bucket();
 
 export default storage;

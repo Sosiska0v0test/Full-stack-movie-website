@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const Axios = axios.create({
-  baseURL: '/api',
-})
+  baseURL: 'https://topolya-films-blsp.onrender.com/api',
+});
 
 export default Axios;

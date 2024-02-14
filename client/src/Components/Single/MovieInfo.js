@@ -14,7 +14,7 @@ function MovieInfo({ movie, setModalOpen, DownloadVideo, progress }) {
           <div className='xl:col-span-1 w-full xl:order-none order-last h-header bg-dry border border-main rounded-lg overflow-hidden'>
             <img src={ movie?.image ? movie?.image : "/images/user.jfif" } alt={ movie?.name } className='w-full h-full object-cover' />
           </div>
-          <div className='col-span-2 md:grid grid-cols-5 gap-4 items-center'>
+          <div className='col-span-2 md:grid grid-cols-3 gap-4 items-center'>
             <div className='col-span-3 flex flex-col gap-10'>
               {/* Title */ }
               <h1 className='xl:text-4xl capitalize font-sans text-2xl font-bold'>

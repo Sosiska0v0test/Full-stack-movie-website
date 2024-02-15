@@ -12,7 +12,7 @@ function PopularMovies({ isLoading, movies }) {
       <Titles title="Популярні" Icon={ BsCollectionFill } />
       {
         isLoading ? <Loader /> : movies?.length > 0 ? (
-          <div className='grid sm:mt-12 mt-7 xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 h-86 w-full'>
+          <div className='grid sm:mt-12 mt-7 xl:grid-cols-7 2xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 h-86 w-full'>
             {
               movies?.slice(0, 8).map((movie, index) => (
                 <Movie key={ index } movie={ movie } />

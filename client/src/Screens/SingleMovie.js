@@ -78,7 +78,7 @@ function SingleMovie() {
             { RelatedMovies?.length > 0 && (
               <div className="my-16">
                 <Titles title="Схожі фільми" Icon={ BsCollectionFill } />
-                <div className="grid sm:mt-10 mt-6 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-6">
+                <div className="grid sm:mt-10 mt-6 xl:grid-cols-7 2xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-6">
                   { RelatedMovies?.map((movie) => (
                     <Movie key={ movie?._id } movie={ movie } />
                   )) }

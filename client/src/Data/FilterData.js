@@ -1,5 +1,5 @@
 export const LanguageData = [
-  { title: "Сортувати за країною" },
+  { title: "За країною" },
   { title: "Україна" },
   { title: "Сполучені Штати Америки" },
   { title: "Велика Британія" },
@@ -48,7 +48,7 @@ export const LanguageData = [
 ];
 
 export const RatesData = [
-  { title: 'Сортувати за рейтингом' },
+  { title: 'За рейтингом' },
   { title: '1 Star' },
   { title: '2 Star' },
   { title: '3 Star' },
@@ -57,7 +57,7 @@ export const RatesData = [
 ]
 
 export const TimesData = [
-  { title: 'Сортувати за часом' },
+  { title: 'За часом' },
   { title: '1 Hours' },
   { title: '2 Hours' },
   { title: '3 Hours' },
@@ -71,7 +71,7 @@ export const TimesData = [
 ]
 
 export const YearData = [
-  { title: 'Сортувати за роком' },
+  { title: 'За роком' },
   { title: '2024' },
   { title: '2023' },
   { title: '2022' },

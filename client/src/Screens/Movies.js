@@ -106,7 +106,7 @@ function MoviesPage() {
           </div>
         ) : movies?.length > 0 ? (
           <>
-            <div className="grid sm:mt-10 mt-6 xl:grid-cols-7 2xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-2 gap-3">
+            <div className="grid sm:mt-10 mt-6 xl:grid-cols-7 2xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3">
               { movies.map((movie, index) => (
                 <Movie key={ index } movie={ movie } />
               )) }

@@ -1,5 +1,5 @@
 export const LanguageData = [
-  { title: "За країною" },
+  { title: "Sort By Language" },
   { title: "Україна" },
   { title: "Сполучені Штати Америки" },
   { title: "Велика Британія" },
@@ -48,7 +48,7 @@ export const LanguageData = [
 ];
 
 export const RatesData = [
-  { title: 'За рейтингом' },
+  { title: "Sort By Rates" },
   { title: '1 Star' },
   { title: '2 Star' },
   { title: '3 Star' },
@@ -57,7 +57,7 @@ export const RatesData = [
 ]
 
 export const TimesData = [
-  { title: 'За часом' },
+  { title: "Sort By Hours" },
   { title: '1 Hours' },
   { title: '2 Hours' },
   { title: '3 Hours' },
@@ -71,7 +71,7 @@ export const TimesData = [
 ]
 
 export const YearData = [
-  { title: 'За роком' },
+  { title: "Sort By Year" },
   { title: '2024' },
   { title: '2023' },
   { title: '2022' },
@@ -146,40 +146,6 @@ export const YearData = [
   { title: '1953' },
   { title: '1952' },
   { title: '1951' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
-  { title: '1950' },
   { title: '1950' },
   { title: '1948' },
   { title: '1947' },

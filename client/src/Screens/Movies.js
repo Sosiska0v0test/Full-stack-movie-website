@@ -1,21 +1,25 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import Layout from '../Layout/Layout';
 import Filters from '../Components/Filters';
+import Layout from '../Layout/Layout';
 import Movie from '../Components/Movie';
 import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 import { TbPlayerTrackNext, TbPlayerTrackPrev } from 'react-icons/tb';
 import Loader from '../Components/Notification/Loader';
-import { ImFilm } from "react-icons/im";
+import { RiMovie2Line } from 'react-icons/ri';
 import { getAllMoviesAction } from '../Redux/Actions/MoviesActions';
-import { LanguageData, RatesData, TimesData, YearData } from '../Data/FilterData';
+import {
+  LanguageData,
+  RatesData,
+  TimesData,
+  YearData,
+} from '../Data/FilterData';
 import { useParams } from 'react-router-dom';
-
 
 function MoviesPage() {
   const { search } = useParams();
   const dispatch = useDispatch();
-  const [category, setCategory] = useState({ title: 'Всі категорії' });
+  const [category, setCategory] = useState({ title: 'All Categories' });
   const [year, setYear] = useState(YearData[0]);
   const [times, setTimes] = useState(TimesData[0]);
   const [rates, setRates] = useState(RatesData[0]);
@@ -32,9 +36,9 @@ function MoviesPage() {
   // queries
   const queries = useMemo(() => {
     const query = {
-      category: category?.title === 'Всі категорії' ? '' : category?.title,
+      category: category?.title === 'All Categories' ? '' : category?.title,
       time: times?.title.replace(/\D/g, ''),
-      language: language?.title === 'Сортувати за країною' ? '' : language?.title,
+      language: language?.title === 'Sort By Language' ? '' : language?.title,
       rate: rates?.title.replace(/\D/g, ''),
       year: year?.title.replace(/\D/g, ''),
       search: search ? search : '',
@@ -94,11 +98,11 @@ function MoviesPage() {
       <div className="min-height-screen container mx-auto px-2 my-6">
         <Filters data={ datas } />
         <p className="text-lg font-medium my-6">
-          Знайдено { ' ' }
+          Total{ ' ' }
           <span className="font-bold text-subMain">
             { movies ? movies?.length : 0 }
           </span>{ ' ' }
-          фільмів { search && `for "${search}"` }
+          items Found { search && `for "${search}"` }
         </p>
         { isLoading ? (
           <div className="w-full gap-6 flex-colo min-h-screen">
@@ -106,7 +110,7 @@ function MoviesPage() {
           </div>
         ) : movies?.length > 0 ? (
           <>
-            <div className="grid sm:mt-10 mt-6 xl:grid-cols-7 2xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3">
+            <div className="grid sm:mt-10 mt-6 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-6">
               { movies.map((movie, index) => (
                 <Movie key={ index } movie={ movie } />
               )) }
@@ -130,12 +134,12 @@ function MoviesPage() {
             </div>
           </>
         ) : (
-          <div className='w-full gap-6 flex-colo min-h-screen'>
+          <div className="w-full gap-6 flex-colo min-h-screen">
             <div className="w-24 h-24 p-5 rounded-full mb-4 bg-dry text-subMain text-4xl flex-colo">
-              <ImFilm />
+              <RiMovie2Line />
             </div>
             <p className="text-border text-sm">
-              Тут поки що порожньо
+              It seem's like we dont have any movie
             </p>
           </div>
         ) }
